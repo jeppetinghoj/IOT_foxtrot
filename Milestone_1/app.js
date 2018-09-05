@@ -2,10 +2,10 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var logger = require('morgan'); 
 
 var indexRouter = require('./routes/index');
-
+var ip = require("ip");
 var app = express();
 
 // view engine setup
@@ -35,5 +35,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+console.log('This server is running at ' + ip.address() + ':3000');
+
 
 module.exports = app;

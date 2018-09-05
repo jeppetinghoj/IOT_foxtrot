@@ -1,5 +1,16 @@
 extends layout
 
 block content
+
   h1= title
   p Welcome to #{title}
+  table
+    tbody
+      tr
+        th Temperature sensor
+        th Humidity sensor
+        th Motion sensor
+      tr
+        td #{sensor_temp}
+        td #{sensor_humid}
+        td #{sensor_motion}
