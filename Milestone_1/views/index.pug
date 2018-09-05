@@ -7,10 +7,16 @@ block content
   table
     tbody
       tr
-        th Temperature sensor
-        th Humidity sensor
-        th Motion sensor
+        td
+          b Temperature sensor
+        td
+          b Humidity sensor
+        td
+          b Motion sensor
       tr
         td #{sensor_temp}
         td #{sensor_humid}
-        td #{sensor_motion}
+        if sensor_motion == 0
+          td Motion not detected
+        else
+          td Motion detected
