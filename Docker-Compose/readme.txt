@@ -17,7 +17,7 @@ $docker-compose --version
 
 Download Image and start container:
 
-$cd IOT_foxtrot/Dokcer-Compose/
+$cd IOT_foxtrot/Docker-Compose/
 
-$docker-container up
+$docker-compose up
 
