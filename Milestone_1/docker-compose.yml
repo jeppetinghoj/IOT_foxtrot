@@ -6,6 +6,6 @@ services:
     build: .
     container_name: milestone1_test
     volumes:
-      - .:/usr/src/app
+      - .:/app
     ports:
       - 3000:3000
