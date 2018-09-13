@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan'); 
+var os = require('os');
 
 var indexRouter = require('./routes/index');
 //var apiRouter = require('./api/routes');
@@ -37,6 +38,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+console.log(os.networkInterfaces.ip);
 
 console.log('This server is running at ' + ip.address() + ':3000');
 
