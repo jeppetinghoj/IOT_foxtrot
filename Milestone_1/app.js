@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-console.log(os.networkInterfaces.ip);
+console.log('PI IP: ' + os.networkInterfaces.ip);
 
 console.log('This server is running at ' + ip.address() + ':3000');
 
