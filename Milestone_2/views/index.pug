@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1= title
+  p Welcome to #{title}
+  table
+    tbody
+      tr
+        td
+          b Temperature sensor
+        td
+          b Humidity sensor
+        td
+          b Motion sensor
+      tr
+        td #{sensor_temp}
+        td #{sensor_humid}
+        if sensor_motion == 0
+          td Motion not detected
+        else
+          td Motion detected
