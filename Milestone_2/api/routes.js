@@ -23,4 +23,11 @@ router.get('/motionsensor', function(req, res, next) {
     });
 });
 
+router.put('/motionsensor', function (req, res, next) {
+    res.status(200).json({
+        ledStatus: io_handler.getMotionSensorStatus(),
+        date: Date.now()
+    });
+});
+
 module.exports = router;
