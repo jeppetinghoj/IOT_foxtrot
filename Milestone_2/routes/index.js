@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var io_handler = require('../io_handler.js');
 
-app.use('/api', require('./api/routes'));
+//app.use('/api', require('./api/routes'));
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
