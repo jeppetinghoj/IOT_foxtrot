@@ -20,6 +20,11 @@ module.exports.getMotionSensorStatus = function () {
 };
 
 
-module.exports.setLed = function () {
-    return led.writeSync(1);
+module.exports.setLed = function (a) {
+
+    if (a == 0 || a == 1)
+    {
+        return led.writeSync(a);
+    }
+
 };
